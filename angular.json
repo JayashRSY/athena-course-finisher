@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "athena-course-finisher": {
+    "athena-finisher": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/athena-course-finisher",
+            "outputPath": "dist/athena-finisher",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "athena-course-finisher:build:production"
+              "browserTarget": "athena-finisher:build:production"
             },
             "development": {
-              "browserTarget": "athena-course-finisher:build:development"
+              "browserTarget": "athena-finisher:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "athena-course-finisher:build"
+            "browserTarget": "athena-finisher:build"
           }
         },
         "test": {

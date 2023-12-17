@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'athena-course-finisher'`, () => {
+  it(`should have as title 'athena-finisher'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('athena-course-finisher');
+    expect(app.title).toEqual('athena-finisher');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('athena-course-finisher app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('athena-finisher app is running!');
   });
 });
