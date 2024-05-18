@@ -39,6 +39,26 @@ export class DataService {
       { headers }
     );
   }
+  getAllPaginatedAssignedCourses() {
+    const headers = {
+      'Content-Type': 'application/json',
+      Authorization: this.token,
+    };
+    return this._httpClient.post<any>(
+      `https://eapi.geminisolutions.com/gemassessment/api/getAllPaginatedAssignedCourses`,
+      {
+        userId: this.userId,
+        searchParam: '',
+        pageNumber: 0,
+        categoryId: 0,
+        isCompleted: false,
+        isCourseExpired: false,
+        year: 0,
+        pageSize: 8
+      },
+      { headers }
+    );
+  }
   getCourseDetails(courseCandidateId: any) {
     const headers = {
       'Content-Type': 'application/json',

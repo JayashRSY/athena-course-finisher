@@ -36,11 +36,17 @@ export class UserComponent {
               'athena-token',
               this.userForm.controls.token.value
             );
-            this._dataService.getAllAssignedCourses().subscribe((res: any) => {
+            // this._dataService.getAllAssignedCourses().subscribe((res: any) => {
+            //   if (res.isSuccess) {
+            //     this.courseList = res.data.courseCandidatesDTO;
+            //   }
+            // });
+            this._dataService.getAllPaginatedAssignedCourses().subscribe((res: any) => {
               if (res.isSuccess) {
-                this.courseList = res.data.courseCandidatesDTO;
+                this.courseList = res.data.paginatedData.courseCandidatesDTO;
               }
             });
+
           } else {
             alert('Error in User Id/Token');
           }
